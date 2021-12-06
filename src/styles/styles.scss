@@ -95,3 +95,18 @@ header {
         }
     }
 }
+
+.slick-slider {
+    max-width: 1300px;
+    margin: auto;
+    img {
+        width: 100%;
+        height: auto;
+        &.desktop {
+            display: block;
+        }
+        &.movil {
+            display: none !important;
+        }
+    }
+}
