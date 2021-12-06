@@ -1,0 +1,97 @@
+$cgreyblack : #b1b0ab;
+$cwhite : #fff;
+$cblack : #000;
+$flight : 'BRANDON_LIGHT', sans-serif;
+$fregular : 'BRANDON_REG', sans-serif;
+$fmedium : 'BRANDON_MED', sans-serif;
+$fbold : 'BRANDON_BLD', sans-serif;
+
+@font-face {
+    font-family: 'BRANDON';
+    src: url('../assets/fonts/BRANDON_LIGHT.OTF');
+}
+@font-face {
+    font-family: 'BRANDON';
+    src: url('../assets/fonts/BRANDON_REG.OTF');
+}
+@font-face {
+    font-family: 'BRANDON_MED';
+    src: url('../assets/fonts/BRANDON_MED.OTF');
+}
+@font-face {
+    font-family: 'BRANDON_BLD';
+    src: url('../assets/fonts/BRANDON_BLD.OTF');
+}
+
+body {
+    font-family: $fregular;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.aviso {
+    background-color: $cgreyblack;
+    color: $cwhite;
+    text-align: center;
+    font-family: $fbold;
+    padding: .2rem;
+    font-size: .9rem;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    .cabecera {
+        padding: 1.5rem;
+        .options {
+            width: 100%;
+            ul {
+                li {
+                    margin: .5rem;
+                    i {
+                        color: $cgreyblack;
+                    }
+                }
+            }
+            &:last-child {
+                ul {
+                    justify-content: flex-end;
+                }
+            }
+        }
+        .logo {
+            display: table;
+            width: 100%;
+            max-width: 110px;
+            margin: 0 1rem;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    nav {
+        ul li {
+            margin: 0 1rem;
+            a {
+                color: $cgreyblack;
+                text-transform: uppercase;
+                letter-spacing: .05rem;
+                font-size: .9rem;
+                &:hover, &.active {
+                    color: $cblack;
+                }
+            }
+        }
+    }
+}
