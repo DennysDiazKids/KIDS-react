@@ -1,6 +1,8 @@
+$cgrey : #eeecec;
 $cgreyblack : #b1b0ab;
 $cwhite : #fff;
 $cblack : #000;
+$cred : #e31720;
 $flight : 'BRANDON_LIGHT', sans-serif;
 $fregular : 'BRANDON_REG', sans-serif;
 $fmedium : 'BRANDON_MED', sans-serif;
@@ -47,6 +49,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrap {
+    max-width: 1300px;
+    width: 95%;
+    margin: auto;
+}
+.btn {
+    &.btn-primary {
+        background: $cblack;
+        color: $cwhite;
+        border-color: $cblack;
+    }
 }
 
 header {
@@ -96,9 +110,36 @@ header {
     }
 }
 
-.slick-slider {
-    max-width: 1300px;
-    margin: auto;
+#slider {
+    margin-top: 2rem;
+    .slick-arrow {
+        width: 40px;
+        height: 60px;
+        z-index: 9;
+        background: $cblack;
+        &::before {
+            display: none;
+        }
+        &.slick-prev {
+            left: 0;
+        }
+        &.slick-next {
+            right: 0;
+        }
+    }
+    .slick-dots {
+        bottom: 1rem;
+        li {
+            button:before {
+                font-size: 1rem;
+                opacity: .2;
+            }
+            &.slick-active button:before {
+                opacity: 1;
+                color: $cred;
+            }
+        }
+    }
     img {
         width: 100%;
         height: auto;
@@ -107,6 +148,61 @@ header {
         }
         &.movil {
             display: none !important;
+        }
+    }
+}
+
+form.wrap {
+    max-width: 500px;
+    margin: 2rem auto 0;
+    text-align: center;
+    .campos {
+        margin: 1rem 0 .5rem;
+        input {
+            margin-right: .5rem;
+        }
+    }
+    .form-check {
+        width: fit-content;
+        margin: auto;
+        a {
+            margin-left: .2rem;
+            color: $cblack;
+            text-decoration: underline;
+        }
+    }
+}
+
+footer {
+    background: $cgrey;
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 3rem;
+    .menuFooter {
+        text-transform: uppercase;
+        b {
+            font-weight: 100;
+            font-family: $fmedium;
+            font-size: 1rem;
+            margin-bottom: .7rem;
+            display: block;
+        }
+        a {
+            color: $cgreyblack;
+            font-size: .9rem;
+            letter-spacing: .05rem;
+            &:hover {
+                color: $cblack;
+            }
+        }
+    }
+    .pie {
+        margin-top: 3rem;
+        padding-top: 3rem;
+        border-top: solid 1px rgba($cblack,.05);
+        span {
+            color: $cgreyblack;
+            font-size: .9rem;
         }
     }
 }

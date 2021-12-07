@@ -1,9 +1,11 @@
-import logo from "../../assets/images/logo-kidsmadehere.png"
-import Buscador from "./Buscador"
-import Login from "./Login"
-import Bolsa from "./Bolsa"
+import logo from "../../../assets/images/logo-kidsmadehere.png"
+import Buscador from "../Buscador"
+import Login from "../Login"
+import Bolsa from "../Bolsa"
 
-import { Outlet, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
+
+import HeaderNav from "./HeaderNav"
 
 const Header = () => (
     <header>
@@ -11,9 +13,9 @@ const Header = () => (
         <div className="cabecera flex">
             <div className="options">
             </div>
-            <NavLink className="logo" to="./">
+            <Link className="logo" to="./">
                 <img src={logo} alt="KIDS made here" />
-            </NavLink>
+            </Link>
             <div className="options">
                 <ul className="flex">
                     <li>
@@ -37,35 +39,7 @@ const Header = () => (
                 </ul>
             </div>
         </div>
-        <nav>
-            <ul className="flex">
-                <li>
-                    <NavLink to="./catalogo">NEW IN</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./ropa">Ropa</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./jeans">Jeans</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./polos">Polos</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./graficos">Gráficos</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./rebajas">Rebajas</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./accesorios">Accesorios</NavLink>
-                </li>
-                <li>
-                    <NavLink to="./bikinis">Bikinis</NavLink>
-                </li>
-                <Outlet />
-            </ul>
-        </nav>
+        <HeaderNav />
     </header>
 )
 

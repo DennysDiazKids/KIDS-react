@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import Cargando from "../sections/Cargando"
-import ProductoCard from "../sections/ProductoCard"
+import Cargando from "../secciones/Cargando"
+import ProductoCard from "../secciones/ProductoCard"
 
 const Catalogo = () => {
 

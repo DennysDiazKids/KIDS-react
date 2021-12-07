@@ -1,7 +1,8 @@
 import "../styles/styles.scss"
 
-import Header from "./sections/Header"
-import Pages from "./pages/Pages"
+import Header from "./secciones/principales/Header"
+import Pages from "./paginas/Pages"
+import Footer from "./secciones/principales/Footer"
 
 import { 
   BrowserRouter
@@ -11,6 +12,7 @@ const App = () => (
   <BrowserRouter>
     <Header />
     <Pages />
+    <Footer />
   </BrowserRouter>
 )
 
