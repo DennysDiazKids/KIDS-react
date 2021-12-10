@@ -194,6 +194,10 @@ footer {
             &:hover {
                 color: $cblack;
             }
+            i {
+                display: inline-block;
+                margin-left: .5rem;
+            }
         }
     }
     .pie {

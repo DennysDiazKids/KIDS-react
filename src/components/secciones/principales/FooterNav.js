@@ -58,25 +58,25 @@ const FooterNav = () => (
                 <li>
                     <Link to="./terminos-y-condiciones">
                         <span>Facebook</span>
-                        <i className="fas fa-facebook"></i>
+                        <i className="fab fa-facebook-f"></i>
                     </Link>
                 </li>
                 <li>
                     <Link to="./terminos-y-condiciones">
                         <span>Instagram</span>
-                        <i className="fas fa-instagram"></i>
+                        <i className="fab fa-instagram"></i>
                     </Link>
                 </li>
                 <li>
                     <Link to="./terminos-y-condiciones">
                         <span>Tiktok</span>
-                        <i className="fas fa-tiktok"></i>
+                        <i className="fab fa-tiktok"></i>
                     </Link>
                 </li>
                 <li>
                     <Link to="./terminos-y-condiciones">
                         <span>Spotify</span>
-                        <i className="fas fa-shopify"></i>
+                        <i className="fab fa-spotify"></i>
                     </Link>
                 </li>
             </ul>

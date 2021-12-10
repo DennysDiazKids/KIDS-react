@@ -9,7 +9,7 @@ const Suscripcion = () => (
         </div>
         <div className="form-check">
             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-            <label className="form-check-label" for="flexCheckDefault">
+            <label className="form-check-label" htmlFor="flexCheckDefault">
                 Acepto 
                 <Link to="./terminos-y-condiciones">Términos y Condiciones</Link>
             </label>

@@ -14,7 +14,7 @@ const Catalogo = () => {
 
     return (
         <>
-            <h1>Hola, es el catálogo</h1>
+            <h1>Hola, es el NEW IN</h1>
             {
                 // SI PRODUCTOS EXISTE QUE RENDERIZE LA GRILLA
                 productos ? (

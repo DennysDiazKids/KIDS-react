@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { NavLink } from "react-router-dom"
+import { Outlet, NavLink } from "react-router-dom"
 
 import Cargando from "../Cargando"
 
@@ -21,13 +21,18 @@ const HeaderNav = () => {
                     <>
                         <ul className="flex">
                             {
-                                Menu.map(({id, nombre}) => (
-                                    <li key={id}>
-                                        <NavLink to="./catalogo/">{nombre}</NavLink>
+                                Menu.map((menunav) => (
+                                    <li key={menunav.id}>
+                                        <NavLink
+                                            to={`./c/${menunav.link}`}
+                                        >
+                                            {menunav.nombre}
+                                        </NavLink>
                                     </li>
                                 ))
                             }
                         </ul>
+                        <Outlet />
                     </>
                 // SINO 
                 ) : (

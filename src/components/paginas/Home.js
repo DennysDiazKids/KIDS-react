@@ -18,7 +18,7 @@ const Home = () => {
     const settings = {
         arrows: true,
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -32,19 +32,12 @@ const Home = () => {
                     dataslider ? (
                         <Slider {...settings}>
                             {
-                                dataslider.map(({id, nombre, imgDesktop, imgMovil}) => (
-                                    <div>
+                                dataslider.map((slider) => (
+                                    <div key = {slider.id}>
                                         <img
                                             className="desktop"
-                                            key = {id}
-                                            alt = {nombre}
-                                            src = {imgDesktop}
-                                        />
-                                        <img
-                                            className="movil"
-                                            key = {id}
-                                            alt = {nombre}
-                                            src = {imgMovil}
+                                            alt = {slider.nombre}
+                                            src = {slider.imgDesktop}
                                         />
                                     </div>
                                 ))
