@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import Cargando from "../secciones/Cargando"
 import ProductoCard from "../secciones/ProductoCard"
+import { useParams } from "react-router-dom";
 
-const Catalogo = () => {
+function Categoria() {
+    const params = useParams();
 
     const [productos, setProductos] = useState()
 
@@ -14,7 +16,7 @@ const Catalogo = () => {
 
     return (
         <>
-            <h1>Hola, es el NEW IN</h1>
+            <h1>Categoría {params.link}</h1>
             {
                 // SI PRODUCTOS EXISTE QUE RENDERIZE LA GRILLA
                 productos ? (
@@ -40,4 +42,4 @@ const Catalogo = () => {
     )
 }
 
-export default Catalogo
+export default Categoria

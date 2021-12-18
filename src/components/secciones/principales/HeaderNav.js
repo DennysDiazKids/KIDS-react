@@ -8,7 +8,7 @@ const HeaderNav = () => {
     const [Menu, setMenu] = useState()
 
     useEffect(() => {
-        fetch("http://localhost:3050/categorias")
+        fetch(`${process.env.REACT_APP_URL_API}categorias`)
         .then(response => response.json())
         .then(data => setMenu(data))
     }, [])
@@ -24,7 +24,7 @@ const HeaderNav = () => {
                                 Menu.map((menunav) => (
                                     <li key={menunav.id}>
                                         <NavLink
-                                            to={`./c/${menunav.link}`}
+                                            to={`./${menunav.link}`}
                                         >
                                             {menunav.nombre}
                                         </NavLink>
